@@ -18,9 +18,8 @@ ScoreUp is a Django + Google Gemini project for exam preparation.
 ### Windows
 
 ```bash
-mkdir scoreup
-cd scoreup
-
+mkdir ScoreUp
+cd ScoreUp
 pip install -r requirements.txt
 ```
 
