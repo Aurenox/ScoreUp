@@ -13,22 +13,6 @@ ScoreUp is a Django + Google Gemini project for exam preparation.
 5. For 8-mark questions, write online with a drawing canvas OR upload a handwritten answer as PDF.
 6. Gemini evaluates the answer and provides an estimated score, missing points, strengths, improvements and "How to Score Better" guidance.
 
-## 📸 Screenshots
-
-### Question Categories
-![Question Categories](screenshots/category.png)
-
-### 8-Mark Drawing
-![8-Mark Drawing](screenshots/drawing.png)
-
-### Progress
-![Progress](screenshots/progress.png)
-
-### Progress Details
-![Progress Details](screenshots/progress2.png)
-
-### Practice Result
-![Practice Result](screenshots/result.png)
 ## Setup
 
 ### Windows
@@ -60,12 +44,32 @@ Start the Django Server
 ```bash
 python manage.py runserver
 ```
-
 Open:
 
 - http://127.0.0.1:8000/
 - http://127.0.0.1:8000/admin/
+## 📸 Screenshots
 
+### Question Categories
+![Question Categories](screenshots/category.png)
+
+### 8-Mark Drawing
+![8-Mark Drawing](screenshots/drawing.png)
+
+### Progress
+![Progress](screenshots/progress.png)
+
+### Progress Details
+![Progress Details](screenshots/progress2.png)
+
+### Practice Result
+![Practice Result](screenshots/result.png)
+
+## 📸 Screenshots
+
+A complete collection of ScoreUp project screenshots is available here:
+
+📄 [View Complete Project Screenshots](scoreup_screenshots.pdf)
 ## Important
 
 - Keep `.env` private.
