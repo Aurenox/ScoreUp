@@ -17,8 +17,10 @@ ScoreUp is a Django + Google Gemini project for exam preparation.
 
 ### Windows
 
+open terminal 
 ```bash
-mkdir ScoreUp
+
+git clone https://github.com/Aurenox/ScoreUp.git
 cd ScoreUp
 pip install -r requirements.txt
 ```
@@ -30,7 +32,13 @@ Then:
 ```bash
 python manage.py makemigrations
 python manage.py migrate
+```
+Create an Admin User(optional)
+```bash
 python manage.py createsuperuser
+```
+Start the Django Server
+```bash
 python manage.py runserver
 ```
 
