@@ -1,0 +1,9 @@
+{% extends "base.html" %}{% block title %}ScoreUp Dashboard{% endblock %}{% block content %}
+<div style="display:flex;justify-content:space-between;align-items:center;gap:10px"><div><h1>Your Progress</h1><p class="muted">Subject, module and mark-wise performance.</p></div><a class="btn" href="{% url 'note_list' %}">Practice →</a></div>
+<div class="grid">
+{% for mark,data in stats.items %}<div class="card"><span class="pill">{{ mark }} Mark{% if mark != 1 %}s{% endif %}</span><h2>{{ data.percent }}%</h2><p>Attempted: <b>{{ data.attempted }}</b></p><p>Score: <b>{{ data.scored }}</b> / {{ data.max }}</p><a class="btn secondary" href="{% url 'download_report' mark %}">Download Report PDF</a></div>{% endfor %}
+</div><br>
+<div class="card"><h2>Subject Performance</h2><div class="table-wrap"><table><tr><th>Subject</th><th>1 Mark</th><th>3 Marks</th><th>8 Marks</th></tr>{% for r in subject_rows %}<tr><td>{{ r.subject }}</td><td>{{ r.m1 }}%</td><td>{{ r.m3 }}%</td><td>{{ r.m8 }}%</td></tr>{% empty %}<tr><td colspan="4">No evaluated attempts yet.</td></tr>{% endfor %}</table></div></div><br>
+<div class="card"><h2>Module / Unit Performance</h2><div class="table-wrap"><table><tr><th>Module</th><th>1 Mark</th><th>3 Marks</th><th>8 Marks</th></tr>{% for r in module_rows %}<tr><td>{{ r.module }}</td><td>{{ r.m1 }}%</td><td>{{ r.m3 }}%</td><td>{{ r.m8 }}%</td></tr>{% empty %}<tr><td colspan="4">No module data yet.</td></tr>{% endfor %}</table></div></div><br>
+<div class="card"><h2>Performance Graphs</h2><p class="muted">Subject-wise 1-, 3- and 8-mark performance.</p>{% for r in subject_rows %}<div class="card"><h3>{{ r.subject }}</h3><p>1 Mark — {{ r.m1 }}%</p><div class="bar"><span style="width:{{ r.m1 }}%"></span></div><p>3 Marks — {{ r.m3 }}%</p><div class="bar"><span style="width:{{ r.m3 }}%"></span></div><p>8 Marks — {{ r.m8 }}%</p><div class="bar"><span style="width:{{ r.m8 }}%"></span></div></div>{% endfor %}</div>
+{% endblock %}

@@ -1,0 +1,12 @@
+
+{% extends "base.html" %}
+{% block content %}
+<h1>Questions Ready</h1><p class="muted">Generated from {{ note.title }}</p>
+{% for q in questions %}
+<div class="card question">
+<span class="pill">{{ q.marks }} Mark(s)</span><h2>{{ forloop.counter }}. {{ q.question }}</h2>
+{% if q.options %}<ol type="A">{% for option in q.options %}<li>{{ option }}</li>{% endfor %}</ol>{% endif %}
+<a class="btn" href="{% url 'practice_answer' q.pk %}">Practice Answer →</a>
+</div>
+{% endfor %}
+{% endblock %}

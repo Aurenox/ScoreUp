@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Handwritten 8-Mark Answer</h1>
+{% if error %}<p>{{ error }}</p>{% endif %}
+<p>Question: {{ attempt.question.question }}</p>
+<p>This page is a fallback if the PDF was not attached during submission.</p>
+{% endblock %}

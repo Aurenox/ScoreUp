@@ -1,0 +1,17 @@
+
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <span class="pill" style="background:#ffffff22;color:#fff">AI Exam Practice</span>
+  <h1>Practice Better.<br>Score Better.</h1>
+  <p>Upload your study notes, generate 1/3/8-mark questions, write answers, and get Gemini-powered feedback on what to improve.</p>
+  <a class="btn" style="background:#fff;color:#5b5ce2" href="{% url 'register' %}">Start with ScoreUp →</a>
+</section>
+<br>
+<div class="grid">
+  <div class="card"><h3>📚 Your Notes</h3><p class="muted">Upload PDF notes and use them as the source for practice.</p></div>
+  <div class="card"><h3>❓ Smart Questions</h3><p class="muted">Generate questions for 1, 3 and 8 marks.</p></div>
+  <div class="card"><h3>🧠 AI Evaluation</h3><p class="muted">Get an estimated score, missing points and concrete improvement tips.</p></div>
+  <div class="card"><h3>✍️ Real Exam Mode</h3><p class="muted">Write 8-mark answers online or submit a handwritten PDF.</p></div>
+</div>
+{% endblock %}

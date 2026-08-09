@@ -1,0 +1,8 @@
+
+{% extends "base.html" %}
+{% block content %}
+<div class="card" style="max-width:520px;margin:30px auto">
+<h1>Create your ScoreUp account</h1><p class="muted">Start practicing from your own notes.</p>
+<form method="post">{% csrf_token %}{{ form.as_p }}<button class="btn" type="submit">Create Account</button></form>
+</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+<h1>Generate Questions</h1><p class="muted">{{ note.title }}</p>
+{% if error %}<div class="error">{{ error }}</div>{% endif %}
+<h3>Choose your practice level</h3>
+<form method="post">{% csrf_token %}
+<div class="grid">
+<div class="card"><h3>1 Mark</h3><p class="muted">Quick recall or MCQ.</p><button class="btn" name="marks" value="1">Generate 1 Mark</button></div>
+<div class="card"><h3>3 Marks</h3><p class="muted">Short descriptive answer.</p><button class="btn" name="marks" value="3">Generate 3 Marks</button></div>
+<div class="card"><h3>8 Marks</h3><p class="muted">Full exam-style answer.</p><button class="btn" name="marks" value="8">Generate 8 Marks</button></div>
+</div>
+</form>
+</div>
+{% endblock %}
