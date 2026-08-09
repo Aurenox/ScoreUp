@@ -7,7 +7,7 @@ ScoreUp is a Django + Google Gemini project for exam preparation.
 ## Main flow
 
 1. Register/login.
-2. Upload study notes as PDF.
+2. Upload study notes as PDF. (The assets folder contains some sample notes for testing.)
 3. Generate 1-mark, 3-mark or 8-mark questions from the uploaded notes.
 4. Practice MCQs or write answers.
 5. For 8-mark questions, write online with a drawing canvas OR upload a handwritten answer as PDF.
