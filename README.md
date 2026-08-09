@@ -55,4 +55,3 @@ Open:
 - Keep `.env` private.
 - The 8-mark PDF evaluator is an AI estimate, not an official examiner.
 - PDF size is limited to 20 MB in this MVP.
-- No CSS is included yet; add styling after the core workflow is tested.
