@@ -65,7 +65,7 @@ Open:
 ### Practice Result
 ![Practice Result](screenshots/result.png)
 
-## 📸 Screenshots
+
 
 A complete collection of ScoreUp project screenshots is available here:
 
