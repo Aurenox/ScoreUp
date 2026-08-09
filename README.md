@@ -22,9 +22,12 @@ open terminal
 
 git clone https://github.com/Aurenox/ScoreUp.git
 cd ScoreUp
+
+```
+Install Dependencies
+```bash
 pip install -r requirements.txt
 ```
-
 Create `.env` from `.env.example` and add your Gemini API key.
 
 Then:
